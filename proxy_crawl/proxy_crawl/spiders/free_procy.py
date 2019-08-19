@@ -26,4 +26,4 @@ class FreeProcySpider(CrawlSpider):
             item['ip'] = temp
             item['port'] = j
             yield item
-        return item
+        print(len(java_ip),len(ip_port))
