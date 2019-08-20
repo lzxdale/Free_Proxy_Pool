@@ -4,10 +4,10 @@ Getting free proxy and check if proxy is useable
 Free_proxy_websites used:
 - www.openproxy.space/free-proxy-list
 - www.free-proxy-list.net
-- www.free-proxy.cz # this website down after the spider is finished
+- www.free-proxy.cz # the website down after the spider is finished, not useable now
 
-The spider Max RE_try time is set to 2 in the setting.py(by default is 3)
-Only crawling Proxy ip and port, more can be added in the pipeline file if needed.
+The spider Max RE_try time is set to 2 in the setting.py (by default is 3)
+Only crawling Proxy ip and port, more can be added in the pipeline.py if needed.
 
 After crawling the above website, all possible ip is stored into proxy_file.csv
 
