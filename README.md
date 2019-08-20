@@ -14,7 +14,11 @@ After crawling the above website, all possible ip is stored into proxy_file.csv
 Then, in the 'check.py' file, the csv file is read and all ip is checked (by requesting google.com)
 	- the proxy request is using mutli threading (much faster than just using for loop and requesting one by one, 8sec vs 130sec for 200 proxy)  
 
-
+- Use Method:
+	open the proxy_crawl folder by pycharm as project
+	run Proxy_get&check.py
+	U will got a txt file call the good_ip
+	done
 
 
 
