@@ -16,8 +16,11 @@ Then, in the 'check.py' file, the csv file is read and all ip is checked (by req
 
 - Use Method:
 	open the proxy_crawl folder by pycharm as project
+	
 	run Proxy_get&check.py
+	
 	U will got a txt file call the good_ip
+	
 	done
 
 
