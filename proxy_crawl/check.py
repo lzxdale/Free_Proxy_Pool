@@ -11,7 +11,7 @@ class Http_proxy:
     def checking(self, ip):
         proxies = {"http": ip}
         try:
-            requests.get("http://google.com", proxies=proxies, timeout=3)
+            requests.get("http://www.spbeen.com/tool/request_info/", proxies=proxies, timeout=3)
         except:
             print(ip, "not successful")
         else:
@@ -23,16 +23,22 @@ def save_ip(ip):
         f.writelines(ip)
         f.writelines('\n')
 
+def clean_ip():
+    with open('good_ip.txt', 'w') as f:
+        f.close()
+
 
 if __name__ == "__main__":
     temp = pd.read_csv('proxy_file.csv')
-    thelist = list(temp['port'])
+    iplist = list(temp['ip'])
+    portlist = list(temp['port'])
+    clean_ip()
     start = time.time()
     proxy = Http_proxy()
     lock = threading.Lock()
     thread_list = []
-    for i in thelist:
-        thread_list.append(threading.Thread(target=proxy.checking, args=(i,)))
+    for i, p in zip(iplist, portlist):
+        thread_list.append(threading.Thread(target=proxy.checking, args=(str(i)+':'+str(p),)))
     for t in thread_list:
         t.start()
     for t in thread_list:

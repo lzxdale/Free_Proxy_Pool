@@ -11,5 +11,5 @@ class ProxyCrawlPipeline(object):
         #print(spider.name, 'pipelines')
         with open('proxy_file.csv', 'a+') as file:
             writer = csv.writer(file)
-            writer.writerow(('ip',item['ip']+':'+item['port']))
+            writer.writerow((item['ip'],item['port'], item['country'],item['anonymity']))
         return item

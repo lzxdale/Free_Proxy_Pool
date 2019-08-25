@@ -7,7 +7,7 @@ Free_proxy_websites used:
 - www.free-proxy.cz # this website down after the spider is finished
 
 The spider Max RE_try time is set to 2 in the setting.py(by default is 3)
-Only crawling Proxy ip and port, more can be added in the pipeline file if needed.
+crawling Proxy ip and port, country, and anonymity. More can be added in the pipeline&item file if needed.
 
 After crawling the above website, all possible ip is stored into proxy_file.csv
 

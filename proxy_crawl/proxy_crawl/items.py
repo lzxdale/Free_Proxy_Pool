@@ -13,4 +13,6 @@ class ProxyCrawlItem(scrapy.Item):
     # name = scrapy.Field()
     ip = scrapy.Field()
     port = scrapy.Field()
+    country = scrapy.Field()
+    anonymity = scrapy.Field()
     pass
